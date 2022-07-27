@@ -1,70 +1,70 @@
 'use strict';
 //Complete the solution so that it reverses the string passed into it.
-// function solution(str) {
-//   let reverseString = '';
-//   for (let i = str.length - 1; i >= 0; i--) {
-//     reverseString += str[i];
-//   }
-//   return reverseString;
-//   console.log(reverseString);
-// }
-// solution('world');
+function solution(str) {
+  let reverseString = '';
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverseString += str[i];
+  }
+  return reverseString;
+  console.log(reverseString);
+}
+solution('world');
 
-// // let str = 'World';
-// // let newString = '';
-// // for (let i = str.length - 1; i >= 0; i--) {
-// //   newString += str[i];
-// // }
-// // console.log(newString);
+let str = 'World';
+let newString = '';
+for (let i = str.length - 1; i >= 0; i--) {
+  newString += str[i];
+}
+console.log(newString);
 
 // Code wars people solutions
-// function solution(str){
-//     return str.split('').reverse().join('');
-//   }
+function solution(str){
+    return str.split('').reverse().join('');
+}
 
 /*Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).*/
 // My solution
-// function countSheeps(arrayOfSheep) {
-//   let sheepInPlace = 0;
-//   for (let i = 0; i <= arrayOfSheep.length; i++) {
-//     if (arrayOfSheep[i] === true) {
-//       sheepInPlace += 1;
-//     }
-//   }
-//   return sheepInPlace;
-// }
-// countSheeps();
-// CODE WARS FORUM SOLUTION
-// function countSheeps(arrayOfSheeps) {
-//     return arrayOfSheeps.filter(Boolean).length;
-//   }
+function countSheeps(arrayOfSheep) {
+  let sheepInPlace = 0;
+  for (let i = 0; i <= arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i] === true) {
+      sheepInPlace += 1;
+    }
+  }
+  return sheepInPlace;
+}
+countSheeps();
+//CODE WARS FORUM SOLUTION
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+ }
 
 /* In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number. */
-// function highAndLow(numbers) {
-//   numbers = numbers.split(' ');
-//   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
-// }
-// highAndLow('1 2 3');
+function highAndLow(numbers) {
+  numbers = numbers.split(' ');
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+highAndLow('1 2 3');
 //Given an array of ones and zeroes, convert the equivalent binary value to an integer.
 
-// const binaryArrayToNumber = arr => {
-//   return parseInt(arr.join(''), 2);
-// };
-// console.log(binaryArrayToNumber([1, 1, 1, 1]));
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(''), 2);
+};
+console.log(binaryArrayToNumber([1, 1, 1, 1]));
 
 //Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 //For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
 
-// function squareDigits(num) {
-//   let total = '';
-//   let numberToString = num.toString();
-//   for (let i = 0; i <= numberToString.length - 1; i++) {
-//     total += numberToString[i] * numberToString[i];
-//   }
-//   let returnToNumber = Number(total);
-//   return returnToNumber;
-// }
-// squareDigits([9119]);
+function squareDigits(num) {
+  let total = '';
+  let numberToString = num.toString();
+  for (let i = 0; i <= numberToString.length - 1; i++) {
+    total += numberToString[i] * numberToString[i];
+  }
+  let returnToNumber = Number(total);
+  return returnToNumber;
+}
+squareDigits([9119]);
 
 /* Return the number (count) of vowels in the given string.
 
@@ -72,45 +72,45 @@ We will consider a, e, i, o, u as vowels for this Kata (but not y).
 
 The input string will only consist of lower case letters and/or spaces.*/
 
-// function getCount(str) {
-//   let countVowels = 0;
-//   for (let i = 0; i <= str.length; i++) {
-//     if (
-//       str[i] === 'a' ||
-//       str[i] === 'e' ||
-//       str[i] === 'i' ||
-//       str[i] === 'o' ||
-//       str[i] === 'u'
-//     ) {
-//       countVowels++;
-//     }
-//   }
-//   return countVowels;
-// }
-// getCount('Mario');
+function getCount(str) {
+  let countVowels = 0;
+  for (let i = 0; i <= str.length; i++) {
+    if (
+      str[i] === 'a' ||
+      str[i] === 'e' ||
+      str[i] === 'i' ||
+      str[i] === 'o' ||
+      str[i] === 'u'
+    ) {
+      countVowels++;
+    }
+  }
+  return countVowels;
+}
+getCount('Mario');
 /*
 Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.*/
 
-// function getSum(a, b) {
-//   let sum = 0;
-//   let lower, highest;
-//   if (a === b) {
-//     return a;
-//   } else {
-//     if (a > b) {
-//       highest = a;
-//       lower = b;
-//     } else {
-//       highest = b;
-//       lower = a;
-//     }
-//     for (let i = lower; i <= highest; i++) {
-//       sum += i;
-//     }
-//   }
-//   return sum;
-// }
-// getSum(-5, -1);
+function getSum(a, b) {
+  let sum = 0;
+  let lower, highest;
+  if (a === b) {
+    return a;
+  } else {
+    if (a > b) {
+      highest = a;
+      lower = b;
+    } else {
+      highest = b;
+      lower = a;
+    }
+    for (let i = lower; i <= highest; i++) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+getSum(-5, -1);
 
 // In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
 // A B C D E F G H I J K L M
@@ -123,42 +123,42 @@ Given two integers a and b, which can be positive or negative, find the sum of a
 
 // The string has a length greater or equal to one and contains only letters from ato z.
 
-// function printerError(s) {
-//   const collorLetters = [
-//     'a',
-//     'b',
-//     'c',
-//     'd',
-//     'e',
-//     'f',
-//     'g',
-//     'h',
-//     'i',
-//     'j',
-//     'k',
-//     'l',
-//     'm',
-//   ];
-//   let counterError = 0;
-//   let strInput = s.split('');
-//   strInput.map(x =>
-//     collorLetters.includes(x) === false ? counterError++ : (counterError += 0)
-//   );
-//   return `${counterError}/${s.length}`;
-// }
-// printerError('aaaxbbbbyyhwawiwjjjwwm');
+function printerError(s) {
+  const collorLetters = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+  ];
+  let counterError = 0;
+  let strInput = s.split('');
+  strInput.map(x =>
+    collorLetters.includes(x) === false ? counterError++ : (counterError += 0)
+  );
+  return `${counterError}/${s.length}`;
+}
+printerError('aaaxbbbbyyhwawiwjjjwwm');
 
 // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
-// function grow(x) {
-//   let toNumber = x;
-//   let sum = 1;
-//   let total = 0;
-//   for (let i = 0; i <= x.length - 1; i++) {
-//     sum *= toNumber[i];
-//   }
-//   return sum;
-// }
-// grow([2, 2, 2, 2, 2, 2]);
+function grow(x) {
+  let toNumber = x;
+  let sum = 1;
+  let total = 0;
+  for (let i = 0; i <= x.length - 1; i++) {
+    sum *= toNumber[i];
+  }
+  return sum;
+}
+grow([2, 2, 2, 2, 2, 2]);
 
 //Complementary DNA
 
