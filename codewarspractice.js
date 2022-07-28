@@ -194,3 +194,16 @@ rowSumOddNumbers(5);
 
 let num = 10;
 console.log(Math.pow(num, 4)); // pow method take number and mulptiply it how we want by his value if num, 2 = 10 * 10
+
+// Return TRUE if the word is Isogram
+function isIsogram(str) {
+  str = str.toLocaleLowerCase();
+  let set = new Set(str);
+  if (str.length === set.size) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
