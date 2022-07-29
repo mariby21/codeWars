@@ -206,4 +206,17 @@ function isIsogram(str) {
   }
 }
 
+//Find avverage of array numbers if array is empty return 0
+
+function findAverage(array) {
+  let sum = 0;
+  if (array.length === 0) {
+    return 0;
+  }
+  for (const i of array) {
+    sum += i;
+  }
+  let totalAvarrage = sum / array.length;
+  return totalAvarrage;
+}
 
