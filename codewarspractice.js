@@ -220,3 +220,15 @@ function findAverage(array) {
   return totalAvarrage;
 }
 
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+var summation = function (num) {
+  let arr = [];
+  let sum;
+  for (let i = 1; i < num + 1; i++) {
+    arr.push(i);
+  }
+  sum = arr.reduce((c, p) => c + p, 0);
+  return sum;
+};
+
